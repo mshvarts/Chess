@@ -1,0 +1,201 @@
+html, body{
+	font-family:Arial;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+#board{
+	border: 1px solid #000;
+	width:642px;
+	height:642px;
+	position:relative;
+}
+
+#board .square{
+	background-image:url("../img/pieces.png");
+	background-size:600% 200%;
+	width:80px;
+	height:80px;
+	float:left;
+	cursor:pointer;
+	z-index:10;
+	position:relative;
+}
+
+#board .square.empty{
+	background-image:none;
+}
+
+#board .square.light{
+	background-color:#ffce9e;
+}
+
+#board .square.dark{
+	background-color:#d18b47;
+}
+
+#board .square.selected{
+	box-shadow: 0 0 2px #0000ff, 0 0 4px #0000ff inset;
+	z-index:20;
+}
+
+#board .square.black-king{
+	background-position:0% 100%;
+}
+
+#board .square.black-queen{
+	background-position:20% 100%;
+}
+
+#board .square.black-bishop{
+	background-position:40% 100%;
+}
+
+#board .square.black-knight{
+	background-position:60% 100%;
+}
+
+#board .square.black-castle{
+	background-position:80% 100%;
+}
+
+#board .square.black-pawn{
+	background-position:100% 100%;
+}
+
+#board .square.white-king{
+	background-position:0% 0%;
+}
+
+#board .square.white-queen{
+	background-position:20% 0%;
+}
+
+#board .square.white-bishop{
+	background-position:40% 0%;
+}
+
+#board .square.white-knight{
+	background-position:60% 0%;
+}
+
+#board .square.white-castle{
+	background-position:80% 0%;
+}
+
+#board .square.white-pawn{
+	background-position:100% 0%;
+}
+
+#board .overlay{
+	background-color:rgba(0,0,0,0.6);
+	position:absolute;
+	height:100%;
+	width:100%;
+	z-index:0;
+	opacity:0;
+    webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+#board .overlay.show{
+	opacity:1;
+	z-index:100;
+}
+
+#board .overlay .overlay-inner{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	width:400px;
+	height:190px;
+	background:#fff;
+	border-radius:15px;
+	padding:15px;
+	box-shadow:0 0 10px rgba(0,0,0,0.3);
+	text-align:center;
+}
+
+#board .overlay .overlay-title{
+	display:block;
+	font-weight:bold;
+	line-height:32px;
+	font-size:20px;
+}
+
+#board .overlay .overlay-text{
+	line-height:22px;
+	font-size:16px;
+}
+
+#board .overlay .overlay-button{
+	display:inline-block;
+	line-height:34px;
+	padding: 0 12px;
+	color:#fff;
+	background:#049eff;
+	border-radius:5px;
+	text-decoration:none;
+	margin-top:10px;
+}
+
+
+#board #promotionList{
+	margin:0;
+	padding:20px 0;
+	list-style-type:none;
+	text-align:center;
+}
+
+#board #promotionList li{
+	display:inline-block;
+	padding:0 5px;
+}
+
+#board #promotionList li a{
+	background-image:url("../img/pieces.png");
+	background-size:600% 200%;
+	width:60px;
+	height:60px;
+	display:block;
+}
+
+#board #promotionList.white li a.queen{
+	background-position:20% 0%;
+}
+
+#board #promotionList.white li a.castle{
+	background-position:80% 0%;
+}
+
+#board #promotionList.white li a.bishop{
+	background-position:40% 0%;
+}
+
+#board #promotionList.white li a.knight{
+	background-position:60% 0%;
+}
+
+#board #promotionList.black li a.queen{
+	background-position:20% 100%;
+}
+
+#board #promotionList.black li a.castle{
+	background-position:80% 100%;
+}
+
+#board #promotionList.black li a.bishop{
+	background-position:40% 100%;
+}
+
+#board #promotionList.black li a.knight{
+	background-position:60% 100%;
+}
