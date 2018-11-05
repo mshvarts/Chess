@@ -1,5 +1,5 @@
 # Two-Player-Chess
-Two player offline chess in html, css and javascript. 
+Two player chess in HTML, CSS and JavaScript. 
 
 This was made as a group project for a web development class.  I was responsible for writing the game logic which makes up over 650 lines of code.
 
