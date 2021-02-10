@@ -1,6 +1,9 @@
-# Two-Player-Chess
-A game of chess written in JavaScript, HTML, and CSS. 
+# Chess
+A game of two player chess written in JavaScript, HTML, and CSS. 
+ 
+I was responsible for writing the game logic (including Castling, Promotion, and En Passant) which makes up over 1000 lines of code.
 
-This was made as a group project for a web development class.  I was responsible for writing the game logic which makes up over ~600 lines of code.
+This was made as a group project for a web development class at Langara College.    
 
-![Image of Chess Board](https://puu.sh/BviCg/d1abbd4538.png)
+### Screenshot:  
+![Image of Chess Board](demo.png)
