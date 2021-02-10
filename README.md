@@ -7,3 +7,5 @@ This was made as a group project for a web development class at Langara College.
 
 ### Screenshot:  
 ![Image of Chess Board](demo.png)
+
+![Image of Chess Board](demo2.PNG)
